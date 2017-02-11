@@ -108,3 +108,9 @@ PRINT STYLESHEET
 	@import "partials/print";
 
 }
+
+
+.tiny-mce-wrapper {
+	margin: 0 auto;
+	display: table;
+}

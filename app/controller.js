@@ -3,7 +3,7 @@
  *
  * You can use this controller for your whole app if it is small
  * or you can have separate controllers for each logical section
- * 
+ *
  */
 ;(function() {
 
@@ -14,10 +14,23 @@
   MainController.$inject = ['LocalStorage', 'QueryService'];
 
 
-  function MainController(LocalStorage, QueryService) {
+  function MainController($scope, LocalStorage, QueryService) {
 
     // 'controller as' syntax
     var self = this;
+
+
+    self.tinymceOptions = {
+      onChange: function(e) {
+        console.log('triggered..');
+      },
+      inline: false,
+      plugins : 'advlist autolink autosave pagebreak anchor link image lists charmap print preview fullscreen',
+      skin: 'lightgray',
+      theme : 'modern',
+      toolbar: 'fontselect',
+      font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n'
+    };
 
 
     ////////////  function definitions
